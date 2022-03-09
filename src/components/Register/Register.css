@@ -1,0 +1,47 @@
+@import 'https://fonts.googleapis.com/css?family=Josefin+Sans';
+
+#register-container {
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Josefin Sans', cursive;
+    height: 100vh;
+}
+
+#register-h {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    font-size: 3rem;
+    color: #88B04B;
+    font-weight: bold;
+    display: flex;
+    border: pink 2px solid;
+}
+
+#register-form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+    width: 300px;
+}
+
+.register-input {
+    display: flex;
+    text-align: center;
+    height: 10vh;
+    font-size: 1.4rem;
+    margin: 30px;
+    width: 80%;
+    border-radius: 100px;
+    font-family: 'Josefin Sans', cursive;
+}
+
+#register-submit {
+    height: 40px;
+}
+

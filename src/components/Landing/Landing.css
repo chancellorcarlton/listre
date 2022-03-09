@@ -1,0 +1,36 @@
+@import 'https://fonts.googleapis.com/css?family=Josefin+Sans';
+
+#landing-container{
+    font-family: 'Josefin Sans', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#landing-h{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    font-size: 3rem;
+    color: #88B04B;
+    font-weight: bold;
+    display: flex;
+    border: pink 2px solid;
+}
+
+.landing-btn{
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 20px;
+    border: grey solid 1px;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+
+
+
+
+
