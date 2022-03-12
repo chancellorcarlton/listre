@@ -1,8 +1,17 @@
-import React from 'react'
+import React from 'react';
+import Nav from '../Nav/Nav';
+import Footer from '../Footer/Footer';
+
 
 function UpdateProfile() {
   return (
-    <div>UpdateProfile</div>
+    <div>
+      <Nav />
+      <div id='id='up-container>
+        
+      </div>
+      <Footer />
+    </div>
   )
 }
 

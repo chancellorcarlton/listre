@@ -1,4 +1,6 @@
-/* .App {
-  text-align: center;
-} */
+@import 'https://fonts.googleapis.com/css?family=Josefin+Sans';
+
+.App {
+  font-family: 'Josefin Sans', cursive;
+}
 

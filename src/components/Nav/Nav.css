@@ -1,14 +1,14 @@
 #navbar-container{
+    background-color: #0057b7;
     display: flex;
     align-items: center;
     justify-content: end;
     height: 100px; 
     margin-top: 0;
-    border: tan solid 3px;
     width: 100vw;
 }
 
-#nb-link-container{
+#navbar-link-container{
     display: flex;
     align-items: center;
     justify-content: end;
@@ -17,8 +17,69 @@
 }
 
 .menu-links{
+    color: #ffd700;
     font-size: 1.2rem;
     text-decoration: none;
     list-style-type: none;
     padding: 5px;
 }
+
+/* nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+    height: 64px;
+    background-color: #0057b7;
+}
+    nav a {
+        font-size: 1rem;
+        display: inline-block;
+        font-size: 15px;
+        z-index: 1;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+    }
+
+    nav .animation {
+        position: absolute;
+        margin-left: 45vw;
+        height: 64px;
+        z-index: 0;
+        transition: all .5s ease 0s;
+        border-radius: 30px;
+    }
+    a:nth-child(1) {
+        width: 100px;
+    }
+    a:nth-child(2) {
+        width: 100px;
+    }
+    a:nth-child(3) {
+        width: 100px;
+    }
+    a:nth-child(4) {
+        width: 100px;
+    }
+    nav .start-home, a:nth-child(1):hover~.animation {
+        width: 100px;
+        left: 0;
+        background-color: #ffd700;
+    }
+    nav .start-about, a:nth-child(2):hover~.animation {
+        width: 100px;
+        left: 100px;
+        background-color: green;
+    }
+    nav .start-join, a:nth-child(3):hover~.animation {
+        width: 100px;
+        left: 200px;
+        background-color: #e74c3c;
+    }
+    nav .start-login, a:nth-child(4):hover~.animation {
+        width: 100px;
+        left: 300px;
+        background-color: grey;
+    } */

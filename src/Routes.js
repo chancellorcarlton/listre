@@ -5,11 +5,13 @@ import Profile from './components/Profile/Profile';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
 import UpdateProfile from './components/UpdateProfile/UpdateProfile';
+import About from './components/About/About';
 
 
 export default(
     <Routes>
         <Route path='/' element={<Landing/>}/>
+        <Route path='/About' element={<About/>}/>
         <Route path='/Profile' element={<Profile/>}/>
         <Route path='/Register' element={<Register/>}/>
         <Route path='/Login' element={<Login/>}/>

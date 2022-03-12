@@ -1,8 +1,16 @@
-import React from 'react'
+import React from 'react';
+import Nav from '../Nav/Nav';
+import Footer from '../Footer/Footer';
 
 function Profile() {
   return (
-    <div>Profile</div>
+    <div>
+      <Nav />
+      <div id='profile-container'>
+        
+      </div>
+      <Footer />
+    </div>
   )
 }
 

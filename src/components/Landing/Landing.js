@@ -5,12 +5,16 @@ import Footer from '../Footer/Footer'
 
 function Landing() {
   return (
-    <div id='landing-container'>
-    <Nav />
-      <div id='landing-h'>Heading</div>
-      <a className='landing-btn' href='./Register'>Sign Up</a>
-      <a className='landing-btn' href='./Login'>Login</a>
-    <Footer />
+    <div>
+      <Nav />
+      <div id='landing-container'>
+        <div id='landing-h'>listRE</div>
+        <p id='landing-p1'>Don't wait to buy real estate!</p>
+        <p id='landing-p2'>Buy real estate and wait...</p>
+        <span><a href='./Login'> </a></span>
+        <p id='here-p'> Not a member yet? Click <a id='here-link' href='./Register'>here</a>!</p>
+      </div>
+      <Footer />
     </div>
   )
 }
