@@ -2,5 +2,7 @@
 
 .App {
   font-family: 'Josefin Sans', cursive;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 4px;
 }
-

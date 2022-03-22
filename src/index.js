@@ -3,19 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
-// import { Provider } from 'react-redux';
+import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
-// import store from './redux/store'
+import store from './redux/store'
+import 'mapbox-gl/dist/mapbox-gl.css';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Provider store={store}> */}
+    <Provider store={store}>
       <Router>
         <App />
       </Router>
-    {/* </Provider> */}
+    </Provider>,
   </React.StrictMode>,
   document.getElementById('root')
 );
 
 // reportWebVitals();
+

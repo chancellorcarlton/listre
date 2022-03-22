@@ -1,0 +1,19 @@
+-- CREATE TABLE profile(
+--   user_id SERIAL PRIMARY KEY,
+--   username VARCHAR(128),
+--   password VARCHAR(255),
+--   first_name VARCHAR(255),
+--   last_name VARCHAR(255)
+-- );
+
+-- CREATE TABLE listing(
+--   listing_id SERIAL PRIMARY KEY,
+--   user_id INT,
+--   price INT,
+--   bedrooms INT,
+--   baths INT,
+--   acreage INT,
+--   property_style VARCHAR(255),
+--   year_built INT,
+--   FOREIGN KEY (user_id) REFERENCES profile(user_id)
+-- );

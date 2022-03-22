@@ -1,12 +1,12 @@
 import React from 'react';
-import Nav from '../Nav/Nav';
+import Navigation from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 
 
 function UpdateProfile() {
   return (
     <div>
-      <Nav />
+      <Navigation />
       <div id='id='up-container>
         
       </div>

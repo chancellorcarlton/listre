@@ -4,17 +4,17 @@ const initialState = {
     id: null,
     username: "",
     password: "",
-    profile_pic: "",
+    profile_pic: "", 
     isLoggedIn: false
 }
 
-//action constant
+//ACTION
 const LOGIN_USER = 'LOGIN_USER';
 const LOGOUT_USER = 'LOGOUT_USER';
 const GET_USER = 'GET_USER';
 const UPDATE_USER = 'UPDATE_USER';
 
-//action creator
+//ACTION CREATORS (FUNCTIONS)
 export function loginUser({userId, username, profile_pic}) {
     return {
         type: LOGIN_USER,
@@ -33,8 +33,8 @@ export function logoutUser() {
     }
 }
 
-export function getuser() {
-    const user = axios.get('auth/user')
+export function getUser() {
+    const user = axios.get('/auth/user')
     return {
         type: GET_USER,
         payload: user
@@ -52,12 +52,12 @@ export function updateUser({id, username, profile_pic}) {
     }
 }
 
-export default function(state = initialState, action) {
+export default function reducer(state = initialState, action) {
     switch(action.type) {
         case LOGIN_USER:
-            return {...state, ...action.payload, isLoggedIn: true}
+            return { ...state, ...action.payload, isLoggedIn: true}
         case LOGOUT_USER:
-            return {...state, action.payload}
+            return {...state, ...action.payload}
         case GET_USER + '_PENDING':
             return state
         case GET_USER + '_FULFILLED':

@@ -1,18 +1,25 @@
 import React from 'react'
 import './Landing.css'
-import Nav from '../Nav/Nav'
+import Navigation from '../Nav/Nav'
 import Footer from '../Footer/Footer'
 
-function Landing() {
+function Landing(props) {
   return (
     <div>
-      <Nav />
+      <Navigation />
       <div id='landing-container'>
-        <div id='landing-h'>listRE</div>
-        <p id='landing-p1'>Don't wait to buy real estate!</p>
-        <p id='landing-p2'>Buy real estate and wait...</p>
+        <div id='title-logo'>
+          <div id='list-h'>
+            <strong id='list-header'>list</strong>
+          </div>
+          <div id='re-h'>
+            <strong id='re-header'>RE</strong>
+          </div>
+        </div>
+        <p id='landing-p1'>Don't wait to buy real estate</p>
+        <p id='landing-p2'>Buy real estate and wait</p>
         <span><a href='./Login'> </a></span>
-        <p id='here-p'> Not a member yet? Click <a id='here-link' href='./Register'>here</a>!</p>
+        <p id='here-p'>Don't have an account? <a id='here-link' href='./Register'>Sign Up</a></p>
       </div>
       <Footer />
     </div>
@@ -20,3 +27,8 @@ function Landing() {
 }
 
 export default Landing
+
+
+// #0066cc
+
+// #ffcc00
