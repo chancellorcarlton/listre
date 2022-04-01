@@ -36,18 +36,18 @@
 
 #list-header{
   color: #0066cce5;
-  -webkit-text-stroke: 3.3px #ffcc00;
+  -webkit-text-stroke: 2px #ffcc00;
   display: flex;
   justify-content: center;
   font-weight: 100;
   font-size: 6rem;
-  transform: skewY(-35deg) skewX(-20deg) rotateZ(8deg);
+  transform: skewY(-35.6deg) skewX(-20deg) rotateZ(8deg);
   align-items: center;
   text-shadow: -10px 10px 30px white;
   height: 80px;
   width: 190px;
   padding: 43px 20px 0 20px;
-  letter-spacing: .1vw;
+  letter-spacing: 0;
 }
 
 #re-header{
@@ -88,7 +88,7 @@
   text-shadow: .01px 1px 20px #ffcc00;
 }
 
-span{
+#landing-login-button{
     position: relative;
     display: inline-flex;
     width: 180px;
@@ -96,7 +96,7 @@ span{
     perspective: 1000px;
     margin-bottom: 2vh;
   }
-  span a{
+  #landing-login-button a{
     font-size: 1.5rem;
     letter-spacing: 2px;
     transform-style: preserve-3d;
@@ -104,8 +104,8 @@ span{
     transition: transform .75s;
     
   }
-  span a:before,
-  span a:after{
+  #landing-login-button a:before,
+  #landing-login-button a:after{
     position: absolute;
     content: "Login";
     height: 55px;
@@ -117,16 +117,16 @@ span{
     box-sizing: border-box;
     border-radius: 5px;
   }
-  span a:before{
+  #landing-login-button a:before{
     color: #0066cc;
     background: #ffcc00;
     transform: rotateY(0deg) translateZ(25px);
   }  
-  span a:after{
+  #landing-login-button a:after{
     color: #ffcc00;
     transform: rotateX(90deg) translateZ(25px);
   }
-  span a:hover{
+  #landing-login-button a:hover{
     transform: translateZ(-25px) rotateX(-90deg);
   }
 
@@ -258,7 +258,7 @@ span{
   #re-header{
     display: none
   }
-  span{
+  #landing-login-button{
     margin-top: 90px;
   }
   #here-p{

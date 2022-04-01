@@ -6,6 +6,7 @@ import axios from 'axios';
 // import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { getUser } from '../../redux/reducer';
+import { useNavigate } from 'react-router-dom';
 // const saltRounds = 10;
 // const myPlaintextPassword = 's0/\/\P4$$w0rD';
 // const someOtherPlaintextPassword = 'not_bacon';
@@ -13,18 +14,21 @@ import { getUser } from '../../redux/reducer';
 
 const Login = (props) => {
   const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-
+  const [passhash, setPasshash] = useState("");
+  const navigate = useNavigate();
   const login = (e) => {
     e.preventDefault();
 
     axios
-    .post("/auth/login", { username, password })
+    .post("/auth/login", { username, passhash })
     .then((res) => {
-      props.getUser(res.data)
-      props.history.push("/profile");
+      console.log(res.data)
+      localStorage.setItem('first_name', res.data.first_name);
+      localStorage.setItem('last_name', res.data.last_name);
+      // props.getUser(res.data)
+      navigate("/profile");
     })
-    .catch((error) => alert(error, "Sorry, Username or Password incorrect"));
+    .catch((error) => alert(error.response.data));
   }
   
   return (
@@ -36,17 +40,19 @@ const Login = (props) => {
         <form id='input-container'>
           <input
             type='text'
+            spellcheck='false'
             name='username'
             className='login-input'
             placeholder='Username'
             onChange={(e) => setUsername(e.target.value)}
           />
           <input
-            type='text'
+            type='password'
+            spellcheck='false'
             name='password'
             className='login-input'
             placeholder='Password' 
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => setPasshash(e.target.value)}
           />
           <button
           type='button'

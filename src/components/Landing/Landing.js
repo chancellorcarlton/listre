@@ -18,7 +18,7 @@ function Landing(props) {
         </div>
         <p id='landing-p1'>Don't wait to buy real estate</p>
         <p id='landing-p2'>Buy real estate and wait</p>
-        <span><a href='./Login'> </a></span>
+        <span id='landing-login-button'><a href='./Login'> </a></span>
         <p id='here-p'>Don't have an account? <a id='here-link' href='./Register'>Sign Up</a></p>
       </div>
       <Footer />

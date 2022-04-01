@@ -1,0 +1,44 @@
+-- CREATE TABLE users(
+--   user_id SERIAL PRIMARY KEY,
+--   username VARCHAR(128),
+--   passhash VARCHAR(255),
+--   first_name VARCHAR(255),
+--   last_name VARCHAR(255),
+--   profile_pic TEXT,
+--   about_me VARCHAR(300)
+-- );
+
+-- CREATE TABLE listing(
+--   listing_id SERIAL PRIMARY KEY,
+--   user_id INT,
+--   price INT,
+--   bedrooms INT,
+--   baths INT,
+--   acreage INT,
+--   property_style VARCHAR(255),
+--   year_built INT,
+--   FOREIGN KEY (user_id) REFERENCES users(user_id)
+-- );
+
+-- CREATE TABLE follows(
+--   follows_id SERIAL PRIMARY KEY,
+--   user_id INT,
+--   following_id INT,
+--   FOREIGN KEY (user_id) REFERENCES users(user_id),
+--   FOREIGN KEY (following_id) REFERENCES users(user_id)
+-- );
+
+-- CREATE TABLE chat(
+--   chat_id SERIAL PRIMARY KEY,
+--   title VARCHAR(255)
+-- );
+
+-- CREATE TABLE messages(
+--   message_id SERIAL,
+--   user_id INT,
+--   created_date date,
+--   message_content VARCHAR(600),
+--   chat_id INT,
+--   FOREIGN KEY (user_id) REFERENCES users(user_id),
+--   FOREIGN KEY (chat_id) REFERENCES chat(chat_id)
+-- );

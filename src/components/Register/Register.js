@@ -36,6 +36,7 @@ function Register(props) {
         <form id='register-form' onSubmit={register}>
           <input
             type='text'
+            spellcheck='false'
             name='first-name'
             className='register-input'
             placeholder='First Name'
@@ -43,6 +44,7 @@ function Register(props) {
           />
           <input
             type='text'
+            spellcheck='false'
             name='last-name'
             className='register-input'
             placeholder='Last Name'
@@ -50,6 +52,7 @@ function Register(props) {
           />
           <input
             type='text'
+            spellcheck='false'
             name='username'
             className='register-input'
             placeholder='Create Username'
@@ -57,6 +60,7 @@ function Register(props) {
           />
           <input
             type='text'
+            spellcheck='false'
             name='password'
             className='register-input'
             placeholder='Create Password'
@@ -73,8 +77,6 @@ function Register(props) {
   )
 }
 
-// const MapToStateProps = reduxState => reduxState.mapState
+const MapToStateProps = reduxState => reduxState.mapState
 
-export default Register
-
-// export default connect(MapToStateProps, { loginUser })(Register)
+export default connect(MapToStateProps, { loginUser })(Register)

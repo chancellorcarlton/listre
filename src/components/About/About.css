@@ -1,6 +1,7 @@
 #about{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     min-height: calc(100vh - 270px);
     background-image: url(./navalny.png);
@@ -9,12 +10,13 @@
 }
 
 #about-h{
-    height: 50px;
-    font-size: 4rem;
-    margin: 4vh 0 20px 0;
+    height: 200px;
+    font-size: 10rem;
 }
 
-
+#collasible-nav-dropdown{
+    color: #ffcc00;
+}
 
 
 

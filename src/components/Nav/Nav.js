@@ -1,68 +1,58 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Nav,
-  // Container,
-  // NavDropdown,
-  // Button,
-  // Form,
-  // FormControl
+  Navbar,
+  NavDropdown
 } from 'react-bootstrap';
 
 import './Nav.css'
 
 function Navigation() {
+  let first_name= (localStorage.getItem('first_name'))
+  let navigate = useNavigate();
+  function logOut() 
+  {
+    localStorage.clear()
+    navigate('/')
+  }
+  function update()
+  {
+    navigate('/updateprofile')
+  }
   return (
     <div id='navbar-container'>
-      <Nav variant="tabs" defaultActiveKey="/home" id='navvy'>
-        <Nav.Item className='nav-item'>
-          <Nav.Link id='nav-link' href="/">Home</Nav.Link>
-        </Nav.Item>
-        <Nav.Item className='nav-item'>
-          <Nav.Link id='nav-link' href="/register">Register</Nav.Link>
-        </Nav.Item>
-        <Nav.Item className='nav-item'>
-          <Nav.Link id='nav-link' href="/about">About</Nav.Link>
-        </Nav.Item>
-        <Nav.Item className='nav-item'>
-          <Nav.Link id='nav-link' href="/login">Login</Nav.Link>
-        </Nav.Item>
-        
-      </Nav>
+      <Navbar.Brand id='listre-nav' href="/">        
+        <div id='title-logo-nav'>
+          <div id='list-h-nav'>
+            <strong id='list-header-nav'>list</strong>
+          </div>
+          <div id='re-h-nav'>
+            <strong id='re-header-nav'>RE</strong>
+          </div>
+        </div>
+      </Navbar.Brand>
+      <Navbar id='navvy' collapseOnSelect expand="lg" className="top-nav">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav" className="menu-list">
+          <Nav id='nav-menu-links'>
+            <Nav.Link className='link-navigation' href="/">home</Nav.Link>
+            <Nav.Link className='link-navigation' href="/about">about</Nav.Link>
+            <Nav.Link className='link-navigation' href="/register">register</Nav.Link>
+            <Nav.Link className='link-navigation' href="/login">login</Nav.Link>
+            <Nav.Link className='link-navigation'>
+              <NavDropdown id='logout-drop' title={first_name}>
+                <NavDropdown.Item className='link-navigation' onClick={logOut}>Logout</NavDropdown.Item> 
+                <NavDropdown.Item className='link-navigation' onClick={update}>Update User</NavDropdown.Item> 
+              </NavDropdown>
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     </div>
 )
 }
 
 export default Navigation;
 
-
-
-
-
-
-
-
-
-
-
-    // <div id='navbar-container'>
-    //   <div class="toggle" id="mobile-menu">
-    //     <span class="bar"></span>
-    //     <span class="bar"></span>
-    //     <span class="bar"></span>
-    //   </div>
-    //   <nav id='navbar-menu'>
-    //     <a className='navbar-link' href='/'>
-    //       Home
-    //     </a>
-    //     <a className='navbar-link' href='/About'>
-    //       About
-    //     </a>
-    //     <a className='navbar-link' href='/Register'>
-    //       Register
-    //     </a>
-    //     <a className='navbar-link' href='/Login'>
-    //       Login
-    //     </a>
-    //   </nav>
-    // </div>

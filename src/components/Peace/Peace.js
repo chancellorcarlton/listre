@@ -4,16 +4,16 @@ import './About.css';
 import Navigation from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 
-function About() {
+function Peace() {
   return (
     <div>
     <Navigation />
       <div id='about'>
-          <header id='about-h'></header>
+          <header id='about-h'>СЛАВА УКРАЇНІ</header>
       </div>
     <Footer />
     </div>
   )
 }
 
-export default About
+export default Peace

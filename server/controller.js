@@ -7,7 +7,6 @@ module.exports= {
         console.log('hit')
         // const db = req.app.get('db')
         const {username, first_name, last_name, password} = req.body
-        //profile pic
         let checkUser = await sequelize.query(`
             SELECT * FROM users WHERE username = '${username}'
         `)
@@ -27,5 +26,30 @@ module.exports= {
         }
     },
 
+    login: async (req, res) => {
+        const {username, passhash} = req.body
+        console.log(passhash)
+        const validUser = await sequelize.query(`
+        SELECT * FROM users
+        WHERE username = '${username}'; `)
+      .catch((err) => console.log(err))
+        
+      if(validUser[1].rowCount === 1) {
+        console.log(validUser[0][0])
+        if (bcrypt.compareSync(passhash, validUser[0][0].passhash)) {
+          let object = {
+            id: validUser[0][0].user_id,
+            username: validUser[0][0].username, 
+            first_name: validUser[0][0].first_name,
+            last_name: validUser[0][0].last_name
     
+          }
+          res.status(200).send(object)
+        } else {
+          res.status(401).send('It looks like your password is incorrect')
+        }
+      } else {
+        res.status(401).send('It looks like your username is incorrect.')
+      }
+      }
 }

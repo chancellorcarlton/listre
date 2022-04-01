@@ -1,5 +1,17 @@
-#map{
-    width: 90vw;
-    height: 90%;
-    padding: 10px;
+#map-container{
+    width: 100%;
+    border-radius: 10px;
+    border-right: 20px solid;
+    border-left: 20px solid;
+    border-image: linear-gradient(to bottom, #ffcc00, #0066cc) 1 100%;
+}
+
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
 }

@@ -1,59 +1,30 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Card} from 'react-bootstrap';
-import './Profile.css';
 import Navigation from '../Nav/Nav';
+import './Profile.css';
 import Footer from '../Footer/Footer';
-//  import GoogleApiWrapper from '../Map/Map';
-//  import axios from 'axios';
-//  import { connect } from "react-redux";
-//  import { loginUser } from '../../redux/reducer';
-//  import mapboxgl from 'mapbox-gl';
-
-//  mapboxgl.accessToken = https://api.mapbox.com/tokens/v2?access_token={pk.eyJ1IjoiY2hhbmNlcmljaGFyZGNhcmx0b24yMDE1IiwiYSI6ImNsMHdoZjB0aTAxbDczZG14dnN2eWxlM24ifQ.t2KLGzWU84l8ldi0LNoKAA};
-
+import Map from '../Map/Map'
 
 function Profile() {
-
-//  const mapContainer = useRef(null);
-//  const map = useRef(null);
-//  const [lng, setLng] = useState(-70.9);
-//  const [lat, setLat] = useState(42.35);
-//  const [zoom, setZoom] = useState(9);
-
-//  useEffect(() => {
-//    if (map.current) return; 
-//    map.current = new mapboxgl.Map({
-//    container: mapContainer.current,
-//    style: 'mapboxstyles/mapbox/streets-v11',
-//    center: [lng, lat],
-//    zoom: zoom
-//    });
-//    });
-
-
-//    useEffect(() => {
-//      if (!map.current) return; /
-//      map.current.on('move', () => {
-//        setLng(map.current.getCenter().lng.toFixed(4));
-//        setLat(map.current.getCenter().lat.toFixed(4));
-//        setZoom(map.current.getZoom().toFixed(2));
-//      });
-//    });
-
+let first_name = localStorage.getItem('first_name');
+let last_name = localStorage.getItem('last_name');
+  
 
   return (
+    <div>
+    <Navigation />
     <div id='profile'>
-      <Navigation />
       <div id='profile-container'>
         <Card id='profile-card'>
           <Card.Img variant="top" rounded="true" id='profile-img' src="https://images.hindustantimes.com/img/2022/02/26/1600x900/Pictures-of-the-Week-Global-Photo-Gallery-1_1645878096103_1645878105534.jpg" />
           
-            <Card.Title id='card-user-name'>Volodymyr Oleksandrovych Zelenskyy</Card.Title>
+            <Card.Title id='card-user-name'>{first_name + ' ' + last_name}</Card.Title>
           
             <Card.Text id='card-user-bio'>
-              Some quick example text to build on the card title and make up the bulk of
-              the card's content. Quick example text to build on the card title and make up the bulk.
+              Volodymyr Zelenskyy was elected President of Ukraine on April 21, 2019
+              On 20 May, 2019 sworn in as the 6th President of Ukraine
+              January 25, 1978.
             </Card.Text>
             <div id='social-links-profile'>
               <a href='facebook.com'>
@@ -80,7 +51,11 @@ function Profile() {
             </div>
         </Card>
       </div>
-      <Footer />
+      <div id='profile-map-container'>
+        <Map />
+      </div>
+    </div>
+    <Footer />
     </div>
   )
 }
